@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <p>Geben sie eine beliebige Internetadresse ein:</p><br>
+        <input id="eingabe">
+        <button onclick="weiterleitung()">Seite aufrufen</button>
+        <script>
+            function weiterleitung() {
+                let adresse = document.getElementById("eingabe").value;
+                if (!(adresse.includes('http://') || adresse.includes('https://'))) {
+                    adresse = 'http://' + adresse;
+                }
+                location.href = adresse;
+            }
+        </script>
+    </body>
+</html>
